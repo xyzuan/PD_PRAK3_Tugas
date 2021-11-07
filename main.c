@@ -13,9 +13,9 @@
 
 int main(){
 
-    float qty_rawon;
-    float qty_pecel;
-    float qty_teh;
+    float qty_rawon = 0;
+    float qty_pecel = 0;
+    float qty_teh = 0;
     int pil_menu;
 
     divider();
@@ -62,16 +62,17 @@ int main(){
 
     divider();
     printf("Total Pembayaran\n");
-    if ( qty_rawon > 0.000 ){
+    if ( qty_rawon > 0 ){
         grandrawon(qty_rawon);
     }
     
-    if ( qty_pecel > 0.000 ){
-        grandpecel(qty_pecel);
-    }
-    
-    if ( qty_teh > 0.000 ){
+    if ( qty_teh > 0 ){
         grandteh(qty_teh);
+    
+    }
+
+    if ( qty_pecel > 0 ){
+        grandpecel(qty_pecel);
     }
     divider();
     grandtotal(qty_rawon,qty_pecel,qty_teh);
